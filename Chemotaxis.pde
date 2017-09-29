@@ -2,8 +2,8 @@
 
  void setup()   
  {    
-   size(300, 300);
-   dots = new Bacteria[1000];
+   size(250, 250);
+   dots = new Bacteria[1400];
    for(int i = 0; i< dots.length; i++)
      dots[i] = new Bacteria(); 
  }   
@@ -24,7 +24,7 @@
    {
      bacX = 150;
      bacY = 150;
-     bacCol = 0;
+     bacCol = (int)((Math.random()*bacX));
    }
    void move()
    {
@@ -52,7 +52,7 @@
    void show()
    {
      noStroke();
-     fill(bacX, bacY, 255);
+     fill(bacCol, bacCol - mouseX, bacCol - mouseY);
      ellipse(bacX, bacY, 2, 2);
    }
  	//lots of java!   
